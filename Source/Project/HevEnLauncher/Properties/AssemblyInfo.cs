@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle( "HevEnEditors" )]
+[assembly: AssemblyTitle( "HevEnLauncher" )]
 [assembly: AssemblyDescription( "" )]
 [assembly: AssemblyConfiguration( "" )]
 [assembly: AssemblyCompany( "" )]
-[assembly: AssemblyProduct( "HevEnEditors" )]
+[assembly: AssemblyProduct( "HevEnLauncher" )]
 [assembly: AssemblyCopyright( "Copyright ©  2017" )]
 [assembly: AssemblyTrademark( "" )]
 [assembly: AssemblyCulture( "" )]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible( false )]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid( "9a3969e3-7b97-4f2d-93e7-e07aad0d31b9" )]
+[assembly: Guid( "337b4457-1469-43f8-ba59-e15aee6f9f1d" )]
 
 // Version information for an assembly consists of the following four values:
 //
