@@ -873,7 +873,7 @@ namespace server
     };
 
     #define SERVMODE 1
-    #include "ctf.h"
+    #include "GameModeCTF.h"
 
     ctfservmode ctfmode;
     servmode *smode = NULL;
@@ -885,19 +885,23 @@ namespace server
         int np = numclients(-1, true, false);
         np = np<3 ? 4 : (np>4 ? 2 : 3);         // spawn times are dependent on number of players
         int sec = 0;
-        switch(type)
-        {
-        }
+
+		//Select Spawn Type
+        //switch(type)
+        //{
+        //}
         return sec*1000;
     }
 
     bool delayspawn(int type)
     {
-        switch(type)
-        {
-            default:
-                return false;
-        }
+		//Select Spawn Type
+		//switch(type)
+		//{
+		//    default:
+		//        return false;
+		//}
+		return false;
     }
 
     bool pickup(int i, int sender)         // server side item pickup, acknowledge first client that gets it
@@ -3564,7 +3568,7 @@ namespace server
                 break;
 
             #define PARSEMESSAGES 1
-            #include "ctf.h"
+            #include "GameModeCTF.h"
             #undef PARSEMESSAGES
 
             case -1:

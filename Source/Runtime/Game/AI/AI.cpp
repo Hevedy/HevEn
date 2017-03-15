@@ -449,9 +449,9 @@ namespace ai
     static void tryitem(gameent *d, extentity &e, int id, aistate &b, vector<interest> &interests, bool force = false)
     {
         float score = 0;
-        switch(e.type)
-        {
-        }
+        //switch(e.type)
+        //{
+        //}
         if(score != 0)
         {
             interest &n = interests.add();
@@ -615,9 +615,9 @@ namespace ai
             {
                 gameent *d = players[i];
                 bool wantsitem = false;
-                switch(e.type)
-                {
-                }
+                //switch(e.type)
+                //{
+                //}
                 if(wantsitem)
                 {
                     aistate &b = d->ai->getstate();

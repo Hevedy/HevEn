@@ -314,9 +314,6 @@
     <ClCompile Include="..\..\Runtime\Engine\main.cpp">
       <Filter>Source Files\Runtime\Engine</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Runtime\Engine\Master.cpp">
-      <Filter>Source Files\Runtime\Engine</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\Runtime\Engine\Normal.cpp">
       <Filter>Source Files\Runtime\Engine</Filter>
     </ClCompile>
@@ -357,6 +354,15 @@
       <Filter>Source Files\Runtime\Core</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Runtime\Core\ZIP.cpp">
+      <Filter>Source Files\Runtime\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Runtime\Engine\PCH.cpp">
+      <Filter>Source Files\Runtime\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Runtime\Game\PCH.cpp">
+      <Filter>Source Files\Runtime\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Runtime\Core\PCH.cpp">
       <Filter>Source Files\Runtime\Core</Filter>
     </ClCompile>
   </ItemGroup>
