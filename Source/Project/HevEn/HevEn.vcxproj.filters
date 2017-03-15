@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Runtime">
+      <UniqueIdentifier>{3faca8ba-ad45-4d3c-86f4-779393b1c10a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Runtime\Core">
+      <UniqueIdentifier>{980c0de2-2f02-4bf5-ba8f-bc15e2489e0e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Runtime\Engine">
+      <UniqueIdentifier>{d7326523-44d7-4d17-bddf-c64bb6757d08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Runtime\Game">
+      <UniqueIdentifier>{71a241ff-b86d-4fce-ace7-b9bbd1160e93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Runtime\Render">
+      <UniqueIdentifier>{365a7809-294b-47a0-b243-7a0476d235fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Runtime">
+      <UniqueIdentifier>{3d0fb855-043b-4b01-8a2b-34137713b2d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Runtime\Core">
+      <UniqueIdentifier>{bbeae5ed-3750-4c5e-9ad2-d2addcc21b38}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Runtime\Engine">
+      <UniqueIdentifier>{2415daa0-4958-4b2a-810b-bb25b7fb31c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Runtime\Game">
+      <UniqueIdentifier>{ceee34dd-487d-4508-ade3-e6388ba9a4e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Runtime\Render">
+      <UniqueIdentifier>{f7afe9df-123a-45e9-a704-e94722fc7432}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Runtime\Render\PostProcess">
+      <UniqueIdentifier>{97afef51-ed9e-4807-bc94-cccbc57a8809}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Runtime\Render\PostProcess">
+      <UniqueIdentifier>{52f6859a-49ad-4ece-9226-f9b6d6df2df2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Runtime\Engine\Audio">
+      <UniqueIdentifier>{08842052-6be2-4aab-95dc-4484c79ae4b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Runtime\Engine\Audio">
+      <UniqueIdentifier>{707024b0-7821-43b0-8854-546b90190690}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Runtime\Engine\Meshes">
+      <UniqueIdentifier>{26e8ec39-044a-41a6-9fb7-29d1d0be4145}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Runtime\Engine\Meshes">
+      <UniqueIdentifier>{a0b6fbef-82b0-43be-aea1-680c692d862a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Runtime\Engine\Octrees">
+      <UniqueIdentifier>{97bdaeac-1b18-4381-8737-7dd256057748}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Runtime\Engine\Octrees">
+      <UniqueIdentifier>{6cd6ad29-d684-46d8-8395-80e40a92f8cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Runtime\Engine\Physics">
+      <UniqueIdentifier>{f66a8421-7303-4012-937f-18327e8b96da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Runtime\Engine\Physics">
+      <UniqueIdentifier>{78eb49f5-3cfc-4a06-90a9-235cd848e219}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Runtime\Engine\UI">
+      <UniqueIdentifier>{2fa06693-eacd-49fc-9679-6e8ed158c292}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Runtime\Engine\UI">
+      <UniqueIdentifier>{a1202602-a12e-4e1a-89cf-bc6f2fada293}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Runtime\Game\AI">
+      <UniqueIdentifier>{b12fe08a-0366-4ab4-88b8-1a043ff45ad4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Runtime\Game\AI">
+      <UniqueIdentifier>{0c70cd15-bb9f-4f9d-8117-9eb824491719}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Runtime\Renderer\PostProcess\Lensflare.h">
+      <Filter>Header Files\Runtime\Render\PostProcess</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Runtime\Renderer\Light.h">
+      <Filter>Header Files\Runtime\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Runtime\Renderer\Lightning.h">
+      <Filter>Header Files\Runtime\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Runtime\Renderer\Texture.h">
+      <Filter>Header Files\Runtime\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Runtime\Game\AI\AI.h">
+      <Filter>Header Files\Runtime\Game\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Runtime\Game\AI\AIManager.h">
+      <Filter>Header Files\Runtime\Game\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Runtime\Game\EXTInfo.h">
+      <Filter>Header Files\Runtime\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Runtime\Game\Game.h">
+      <Filter>Header Files\Runtime\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Runtime\Game\GameModeCTF.h">
+      <Filter>Header Files\Runtime\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Runtime\Engine\Octrees\Octa.h">
+      <Filter>Header Files\Runtime\Engine\Octrees</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Runtime\Engine\Physics\Ragdoll.h">
+      <Filter>Header Files\Runtime\Engine\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Runtime\Engine\UI\TextEdit.h">
+      <Filter>Header Files\Runtime\Engine\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Runtime\Engine\Meshes\AnimatedModel.h">
+      <Filter>Header Files\Runtime\Engine\Meshes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Runtime\Engine\Meshes\IQM.h">
+      <Filter>Header Files\Runtime\Engine\Meshes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Runtime\Engine\Meshes\MD2.h">
+      <Filter>Header Files\Runtime\Engine\Meshes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Runtime\Engine\Meshes\MD3.h">
+      <Filter>Header Files\Runtime\Engine\Meshes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Runtime\Engine\Meshes\MD5.h">
+      <Filter>Header Files\Runtime\Engine\Meshes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Runtime\Engine\Meshes\Model.h">
+      <Filter>Header Files\Runtime\Engine\Meshes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Runtime\Engine\Meshes\OBJ.h">
+      <Filter>Header Files\Runtime\Engine\Meshes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Runtime\Engine\Meshes\SkeletalModel.h">
+      <Filter>Header Files\Runtime\Engine\Meshes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Runtime\Engine\Meshes\VertexModel.h">
+      <Filter>Header Files\Runtime\Engine\Meshes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Runtime\Engine\BIH.h">
+      <Filter>Header Files\Runtime\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Runtime\Engine\Engine.h">
+      <Filter>Header Files\Runtime\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Runtime\Engine\Explosion.h">
+      <Filter>Header Files\Runtime\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Runtime\Engine\HitZone.h">
+      <Filter>Header Files\Runtime\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Runtime\Engine\MPR.h">
+      <Filter>Header Files\Runtime\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Runtime\Engine\Scale.h">
+      <Filter>Header Files\Runtime\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Runtime\Engine\SMD.h">
+      <Filter>Header Files\Runtime\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Runtime\Engine\World.h">
+      <Filter>Header Files\Runtime\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Runtime\Core\Commands.h">
+      <Filter>Header Files\Runtime\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Runtime\Core\Core.h">
+      <Filter>Header Files\Runtime\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Runtime\Core\CoreEntities.h">
+      <Filter>Header Files\Runtime\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Runtime\Core\Geometry.h">
+      <Filter>Header Files\Runtime\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Runtime\Core\GLEmu.h">
+      <Filter>Header Files\Runtime\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Runtime\Core\GLExts.h">
+      <Filter>Header Files\Runtime\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Runtime\Core\IEngine.h">
+      <Filter>Header Files\Runtime\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Runtime\Core\IGame.h">
+      <Filter>Header Files\Runtime\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Runtime\Core\Tools.h">
+      <Filter>Header Files\Runtime\Core</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Runtime\Renderer\PostProcess\AA.cpp">
+      <Filter>Source Files\Runtime\Render\PostProcess</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Runtime\Renderer\Light.cpp">
+      <Filter>Source Files\Runtime\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Runtime\Renderer\LightDynamic.cpp">
+      <Filter>Source Files\Runtime\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Runtime\Renderer\Material.cpp">
+      <Filter>Source Files\Runtime\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Runtime\Renderer\RenderGL.cpp">
+      <Filter>Source Files\Runtime\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Runtime\Renderer\RenderLights.cpp">
+      <Filter>Source Files\Runtime\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Runtime\Renderer\RenderModel.cpp">
+      <Filter>Source Files\Runtime\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Runtime\Renderer\RenderParticles.cpp">
+      <Filter>Source Files\Runtime\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Runtime\Renderer\RenderSky.cpp">
+      <Filter>Source Files\Runtime\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Runtime\Renderer\RenderText.cpp">
+      <Filter>Source Files\Runtime\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Runtime\Renderer\RenderVA.cpp">
+      <Filter>Source Files\Runtime\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Runtime\Renderer\Shader.cpp">
+      <Filter>Source Files\Runtime\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Runtime\Renderer\Texture.cpp">
+      <Filter>Source Files\Runtime\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Runtime\Game\AI\AI.cpp">
+      <Filter>Source Files\Runtime\Game\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Runtime\Game\AI\AIWaypoint.cpp">
+      <Filter>Source Files\Runtime\Game\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Runtime\Game\GameClient.cpp">
+      <Filter>Source Files\Runtime\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Runtime\Game\Entities.cpp">
+      <Filter>Source Files\Runtime\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Runtime\Game\Game.cpp">
+      <Filter>Source Files\Runtime\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Runtime\Game\GameRender.cpp">
+      <Filter>Source Files\Runtime\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Runtime\Game\Scoreboard.cpp">
+      <Filter>Source Files\Runtime\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Runtime\Game\GameServer.cpp">
+      <Filter>Source Files\Runtime\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Runtime\Game\Weapons.cpp">
+      <Filter>Source Files\Runtime\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Runtime\Engine\Octrees\Octa.cpp">
+      <Filter>Source Files\Runtime\Engine\Octrees</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Runtime\Engine\Octrees\OctaEdit.cpp">
+      <Filter>Source Files\Runtime\Engine\Octrees</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Runtime\Engine\Octrees\OctaRender.cpp">
+      <Filter>Source Files\Runtime\Engine\Octrees</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Runtime\Engine\Physics\Physics.cpp">
+      <Filter>Source Files\Runtime\Engine\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Runtime\Engine\UI\Menus.cpp">
+      <Filter>Source Files\Runtime\Engine\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Runtime\Engine\UI\Movie.cpp">
+      <Filter>Source Files\Runtime\Engine\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Runtime\Engine\UI\UI.cpp">
+      <Filter>Source Files\Runtime\Engine\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Runtime\Engine\Audio\Sound.cpp">
+      <Filter>Source Files\Runtime\Engine\Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Runtime\Engine\BIH.cpp">
+      <Filter>Source Files\Runtime\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Runtime\Engine\Blend.cpp">
+      <Filter>Source Files\Runtime\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Runtime\Engine\EngineClient.cpp">
+      <Filter>Source Files\Runtime\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Runtime\Engine\Commands.cpp">
+      <Filter>Source Files\Runtime\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Runtime\Engine\Console.cpp">
+      <Filter>Source Files\Runtime\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Runtime\Engine\Grass.cpp">
+      <Filter>Source Files\Runtime\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Runtime\Engine\main.cpp">
+      <Filter>Source Files\Runtime\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Runtime\Engine\Master.cpp">
+      <Filter>Source Files\Runtime\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Runtime\Engine\Normal.cpp">
+      <Filter>Source Files\Runtime\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Runtime\Engine\PVS.cpp">
+      <Filter>Source Files\Runtime\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Runtime\Engine\EngineServer.cpp">
+      <Filter>Source Files\Runtime\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Runtime\Engine\ServerBrowser.cpp">
+      <Filter>Source Files\Runtime\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Runtime\Engine\Stain.cpp">
+      <Filter>Source Files\Runtime\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Runtime\Engine\Water.cpp">
+      <Filter>Source Files\Runtime\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Runtime\Engine\World.cpp">
+      <Filter>Source Files\Runtime\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Runtime\Engine\WorldIO.cpp">
+      <Filter>Source Files\Runtime\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Runtime\Core\Crypto.cpp">
+      <Filter>Source Files\Runtime\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Runtime\Core\Geometry.cpp">
+      <Filter>Source Files\Runtime\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Runtime\Core\GLEmu.cpp">
+      <Filter>Source Files\Runtime\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Runtime\Core\Stream.cpp">
+      <Filter>Source Files\Runtime\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Runtime\Core\Tools.cpp">
+      <Filter>Source Files\Runtime\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Runtime\Core\ZIP.cpp">
+      <Filter>Source Files\Runtime\Core</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
