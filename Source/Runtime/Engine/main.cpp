@@ -1128,9 +1128,9 @@ int main(int argc, char **argv)
     if(!notexture) fatal("could not find core textures");
 
     logoutf("Init: Console");
-    if(!execfile("config/stdlib.cfg", false)) fatal("cannot find data files (you are running from the wrong folder, try .bat file in the main folder)");   // this is the first file we load.
-    if(!execfile("config/font.cfg", false)) fatal("cannot find font definitions");
-    if(!setfont("default")) fatal("no default font specified");
+    if(!execfile("Engine/Core/STDLib.hec", false)) fatal("cannot find data files (you are running from the wrong folder, try .bat file in the main folder)");   // this is the first file we load.
+    if(!execfile("Engine/Core/Font.hec", false)) fatal("cannot find font definitions");
+    if(!setfont("Default")) fatal("no default font specified");
 
     UI::setup();
 
