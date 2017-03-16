@@ -43,6 +43,13 @@
     <ClInclude Include="..\..\Runtime\Core\GLExts.h" />
     <ClInclude Include="..\..\Runtime\Core\IEngine.h" />
     <ClInclude Include="..\..\Runtime\Core\IGame.h" />
+    <ClInclude Include="..\..\Runtime\Core\IMGUI\imconfig.h" />
+    <ClInclude Include="..\..\Runtime\Core\IMGUI\imgui.h" />
+    <ClInclude Include="..\..\Runtime\Core\IMGUI\imgui_impl_sdl_gl3.h" />
+    <ClInclude Include="..\..\Runtime\Core\IMGUI\imgui_internal.h" />
+    <ClInclude Include="..\..\Runtime\Core\IMGUI\stb_rect_pack.h" />
+    <ClInclude Include="..\..\Runtime\Core\IMGUI\stb_textedit.h" />
+    <ClInclude Include="..\..\Runtime\Core\IMGUI\stb_truetype.h" />
     <ClInclude Include="..\..\Runtime\Core\Tools.h" />
     <ClInclude Include="..\..\Runtime\Engine\BIH.h" />
     <ClInclude Include="..\..\Runtime\Engine\Engine.h" />
@@ -78,6 +85,9 @@
     <ClCompile Include="..\..\Runtime\Core\Crypto.cpp" />
     <ClCompile Include="..\..\Runtime\Core\Geometry.cpp" />
     <ClCompile Include="..\..\Runtime\Core\GLEmu.cpp" />
+    <ClCompile Include="..\..\Runtime\Core\IMGUI\imgui.cpp" />
+    <ClCompile Include="..\..\Runtime\Core\IMGUI\imgui_draw.cpp" />
+    <ClCompile Include="..\..\Runtime\Core\IMGUI\imgui_impl_sdl_gl3.cpp" />
     <ClCompile Include="..\..\Runtime\Core\PCH.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
     </ClCompile>
@@ -401,7 +411,7 @@
       <SDLCheck>false</SDLCheck>
       <PrecompiledHeaderFile>Core.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile>$(IntDir)Core.pch</PrecompiledHeaderOutputFile>
-      <AdditionalIncludeDirectories>..\..\Runtime\Renderer\PostProcess;..\..\Runtime\Game\AI;..\..\Runtime\Engine\UI;..\..\Runtime\Engine\Physics;..\..\Runtime\Engine\Octrees;..\..\Runtime\Engine\Meshes;..\..\Runtime\Engine\Audio;..\..\Runtime\Game;..\..\Runtime\Engine;..\..\Runtime\Renderer;..\..\Runtime\Core;..\..\ThirdParty\enet\include;..\..\ThirdParty\SDL2\include;..\..\ThirdParty\SDL2Image\include;..\..\ThirdParty\SDL2Mixer\include;..\..\ThirdParty\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\Runtime\Renderer\PostProcess;..\..\Runtime\Game\AI;..\..\Runtime\Engine\UI;..\..\Runtime\Engine\Physics;..\..\Runtime\Engine\Octrees;..\..\Runtime\Engine\Meshes;..\..\Runtime\Engine\Audio;..\..\Runtime\Game;..\..\Runtime\Engine;..\..\Runtime\Renderer;..\..\Runtime\Core;..\..\ThirdParty\enet\include;..\..\ThirdParty\SDL2\include;..\..\ThirdParty\SDL2Image\include;..\..\ThirdParty\SDL2Mixer\include;..\..\ThirdParty\zlib;..\..\Runtime\Core\IMGUI;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <ExceptionHandling>Async</ExceptionHandling>
       <BasicRuntimeChecks>StackFrameRuntimeCheck</BasicRuntimeChecks>

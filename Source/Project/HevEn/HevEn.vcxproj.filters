@@ -85,6 +85,12 @@
     <Filter Include="Header Files\Runtime\Game\AI">
       <UniqueIdentifier>{0c70cd15-bb9f-4f9d-8117-9eb824491719}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Runtime\Core\IMGUI">
+      <UniqueIdentifier>{483ebf09-e00b-474b-9b82-3796c2cfec03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Runtime\Core\IMGUI">
+      <UniqueIdentifier>{d6945a34-12e8-48f5-9f92-26814b64b481}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Runtime\Renderer\PostProcess\Lensflare.h">
@@ -200,6 +206,27 @@
     </ClInclude>
     <ClInclude Include="..\..\Runtime\Core\Tools.h">
       <Filter>Header Files\Runtime\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Runtime\Core\IMGUI\imconfig.h">
+      <Filter>Header Files\Runtime\Core\IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Runtime\Core\IMGUI\imgui.h">
+      <Filter>Header Files\Runtime\Core\IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Runtime\Core\IMGUI\stb_rect_pack.h">
+      <Filter>Header Files\Runtime\Core\IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Runtime\Core\IMGUI\stb_textedit.h">
+      <Filter>Header Files\Runtime\Core\IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Runtime\Core\IMGUI\stb_truetype.h">
+      <Filter>Header Files\Runtime\Core\IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Runtime\Core\IMGUI\imgui_internal.h">
+      <Filter>Header Files\Runtime\Core\IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Runtime\Core\IMGUI\imgui_impl_sdl_gl3.h">
+      <Filter>Header Files\Runtime\Core\IMGUI</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -364,6 +391,15 @@
     </ClCompile>
     <ClCompile Include="..\..\Runtime\Core\PCH.cpp">
       <Filter>Source Files\Runtime\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Runtime\Core\IMGUI\imgui.cpp">
+      <Filter>Source Files\Runtime\Core\IMGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Runtime\Core\IMGUI\imgui_draw.cpp">
+      <Filter>Source Files\Runtime\Core\IMGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Runtime\Core\IMGUI\imgui_impl_sdl_gl3.cpp">
+      <Filter>Source Files\Runtime\Core\IMGUI</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

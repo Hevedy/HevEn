@@ -32,6 +32,7 @@
 // ===========================================================================
 
 
+#include <imgui.h>
 #include "Engine.h"
 
 extern void cleargamma();
@@ -1126,6 +1127,9 @@ int main(int argc, char **argv)
     gl_init();
     notexture = textureload("Engine/Data/Textures/Core/Default.png");
     if(!notexture) fatal("could not find core textures");
+
+	//TODO IMGUI
+
 
     logoutf("Init: Console");
     if(!execfile("Engine/Core/STDLib.hec", false)) fatal("cannot find data files (you are running from the wrong folder, try .bat file in the main folder)");   // this is the first file we load.

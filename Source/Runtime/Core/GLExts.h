@@ -404,6 +404,7 @@ extern PFNGLDRAWRANGEELEMENTSPROC glDrawRangeElements_;
 #define glUseProgram_ glUseProgram
 #define glCreateShader_ glCreateShader
 #define glDeleteShader_ glDeleteShader
+#define glDetachShader_ glDetachShader
 #define glShaderSource_ glShaderSource
 #define glCompileShader_ glCompileShader
 #define glGetShaderiv_ glGetShaderiv
@@ -413,6 +414,7 @@ extern PFNGLDRAWRANGEELEMENTSPROC glDrawRangeElements_;
 #define glGetShaderInfoLog_ glGetShaderInfoLog
 #define glLinkProgram_ glLinkProgram
 #define glGetUniformLocation_ glGetUniformLocation
+#define glGetAttribLocation_ glGetAttribLocation
 #define glUniform1f_ glUniform1f
 #define glUniform2f_ glUniform2f
 #define glUniform3f_ glUniform3f
@@ -499,6 +501,7 @@ extern PFNGLDELETEPROGRAMPROC            glDeleteProgram_;
 extern PFNGLUSEPROGRAMPROC               glUseProgram_;
 extern PFNGLCREATESHADERPROC             glCreateShader_;
 extern PFNGLDELETESHADERPROC             glDeleteShader_;
+extern PFNGLDETACHSHADERPROC			 glDetachShader_;
 extern PFNGLSHADERSOURCEPROC             glShaderSource_;
 extern PFNGLCOMPILESHADERPROC            glCompileShader_;
 extern PFNGLGETSHADERIVPROC              glGetShaderiv_;
@@ -508,6 +511,7 @@ extern PFNGLGETPROGRAMINFOLOGPROC        glGetProgramInfoLog_;
 extern PFNGLGETSHADERINFOLOGPROC         glGetShaderInfoLog_;
 extern PFNGLLINKPROGRAMPROC              glLinkProgram_;
 extern PFNGLGETUNIFORMLOCATIONPROC       glGetUniformLocation_;
+extern PFNGLGETATTRIBLOCATIONPROC		 glGetAttribLocation_;
 extern PFNGLUNIFORM1FPROC                glUniform1f_;
 extern PFNGLUNIFORM2FPROC                glUniform2f_;
 extern PFNGLUNIFORM3FPROC                glUniform3f_;
@@ -531,6 +535,7 @@ extern PFNGLBINDATTRIBLOCATIONPROC       glBindAttribLocation_;
 extern PFNGLGETACTIVEUNIFORMPROC         glGetActiveUniform_;
 extern PFNGLENABLEVERTEXATTRIBARRAYPROC  glEnableVertexAttribArray_;
 extern PFNGLDISABLEVERTEXATTRIBARRAYPROC glDisableVertexAttribArray_;
+
 
 extern PFNGLVERTEXATTRIB1FPROC           glVertexAttrib1f_;
 extern PFNGLVERTEXATTRIB1FVPROC          glVertexAttrib1fv_;
