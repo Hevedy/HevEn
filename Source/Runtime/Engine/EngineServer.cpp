@@ -1116,7 +1116,7 @@ void initserver(bool listen, bool dedicated)
 #endif
     }
 
-    execfile("config/server-init.cfg", false);
+    execfile("Config/ServerInit.cfg", false);
 
     if(listen) setuplistenserver(dedicated);
 

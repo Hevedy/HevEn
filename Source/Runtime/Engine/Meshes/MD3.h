@@ -193,11 +193,11 @@ struct md3 : vertmodel, vertloader<md3>
     {
         const char *pname = parentdir(name);
         part &mdl = addpart();
-        defformatstring(name1, "media/model/%s/tris.md3", name);
+        defformatstring(name1, "Game/Data/Meshes/%s/tris.md3", name);
         mdl.meshes = sharemeshes(path(name1));
         if(!mdl.meshes)
         {
-            defformatstring(name2, "media/model/%s/tris.md3", pname);    // try md3 in parent folder (vert sharing)
+            defformatstring(name2, "Game/Data/Meshes/%s/tris.md3", pname);    // try md3 in parent folder (vert sharing)
             mdl.meshes = sharemeshes(path(name2));
             if(!mdl.meshes) return false;
         }
@@ -210,8 +210,8 @@ struct md3 : vertmodel, vertloader<md3>
 
     bool load()
     {
-        formatstring(dir, "media/model/%s", name);
-        defformatstring(cfgname, "media/model/%s/md3.cfg", name);
+        formatstring(dir, "Game/Data/Meshes/%s", name);
+        defformatstring(cfgname, "Game/Data/Meshes/%s/DefMD3.hed", name);
 
         loading = this;
         identflags &= ~IDF_PERSIST;

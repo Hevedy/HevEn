@@ -138,7 +138,7 @@ VARFN(screenh, scr_h, SCR_MINH, -1, SCR_MAXH, initwarning("screen resolution"));
 
 void writeinitcfg()
 {
-    stream *f = openutf8file("Config/init.cfg", "w");
+    stream *f = openutf8file("Config/Init.cfg", "w");
     if(!f) return;
     f->printf("// automatically written on exit, DO NOT MODIFY\n// modify settings in game\n");
     extern int fullscreen;
@@ -1065,7 +1065,7 @@ int main(int argc, char **argv)
         logoutf("Setting log file: %s", file);
         break;
     }
-    execfile("Config/init.cfg", false);
+    execfile("Config/Init.cfg", false);
     for(int i = 1; i<argc; i++)
     {
         if(argv[i][0]=='-') switch(argv[i][1])
@@ -1105,7 +1105,7 @@ int main(int argc, char **argv)
         if(SDL_Init(SDL_INIT_TIMER|SDL_INIT_VIDEO|SDL_INIT_AUDIO)<0) fatal("Unable to initialize SDL: %s", SDL_GetError());
     }
 
-    logoutf("Init: Net");
+    logoutf("Init: Network");
     if(enet_initialize()<0) fatal("Unable to initialise network module");
     atexit(enet_deinitialize);
     enet_time_set(0);
@@ -1152,18 +1152,18 @@ int main(int argc, char **argv)
     camera1 = player = game::iterdynents(0);
     emptymap(0, true, NULL, false);
 
-    logoutf("Init: Sound");
+    logoutf("Init: Audio");
     initsound();
 
-    logoutf("Init: cfg");
+    logoutf("Init: Core Scripts");
     initing = INIT_LOAD;
-    execfile("config/keymap.cfg");
-    execfile("config/stdedit.cfg");
+    execfile("Engine/Core/Keymap.hec");
+    execfile("Engine/Core/STDEdit.hec");
     execfile(game::gameconfig());
-    execfile("config/sound.cfg");
-    execfile("config/ui.cfg");
-    execfile("config/heightmap.cfg");
-    execfile("config/blendbrush.cfg");
+    //execfile("config/sound.cfg"); TODO Add audio
+    execfile("config/ui.cfg"); // TODO Add UI
+    execfile("Engine/Core/Tools/BrushHeightMap.hec");
+    execfile("Engine/Core/Tools/BrushBlend.hec");
     if(game::savedservers()) execfile(game::savedservers(), false);
 
     identflags |= IDF_PERSIST;
@@ -1182,7 +1182,7 @@ int main(int argc, char **argv)
 
     initing = NOT_INITING;
 
-    logoutf("init: render");
+    logoutf("Init: Render");
     restoregamma();
     restorevsync();
     initgbuffer();
@@ -1192,13 +1192,13 @@ int main(int argc, char **argv)
 
     identflags |= IDF_PERSIST;
 
-    logoutf("init: mainloop");
+    logoutf("Init: Main Loop");
 
-    if(execfile("once.cfg", false)) remove(findfile("once.cfg", "rb"));
+    if(execfile("Once.cfg", false)) remove(findfile("Once.cfg", "rb"));
 
     if(load)
     {
-        logoutf("init: localconnect");
+        logoutf("Init: Local Connect");
         //localconnect();
         game::changemap(load);
     }
@@ -1210,26 +1210,6 @@ int main(int argc, char **argv)
 
     inputgrab(grabinput = true);
     ignoremousemotion();
-
-	//imGui = new imgui( context_ );
-	/*
-	ImGui_ImplSdlGL3_Init( screen );
-	ImGui_ImplSdlGL3_NewFrame( screen );
-	{
-		static float f = 0.0f;
-		ImGui::Text( "Hello, world!" );
-		ImGui::SliderFloat( "float", &f, 0.0f, 1.0f );
-		ImGui::Text( "Application average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate );
-	}
-
-	// imgui's Test window
-	ImGui::ShowTestWindow();
-
-	// Using Urho3D texture with the integration's renderer
-
-	ImGui::Image( notexture, ImVec2( (float)notexture->w, (float)notexture->h ), ImVec2( 0, 0 ), ImVec2( 1, 1 ), ImColor( 255, 255, 255, 255 ), ImColor( 255, 255, 255, 128 ) );
-
-	*/
 
     for(;;)
     {

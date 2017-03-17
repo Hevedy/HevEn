@@ -435,20 +435,20 @@ struct md5 : skelmodel, skelloader<md5>
         const char *fname = name + strlen(name);
         do --fname; while(fname >= name && *fname!='/' && *fname!='\\');
         fname++;
-        defformatstring(meshname, "media/model/%s/%s.md5mesh", name, fname);
+        defformatstring(meshname, "Game/Data/Meshes/%s/%s.md5mesh", name, fname);
         mdl.meshes = sharemeshes(path(meshname));
         if(!mdl.meshes) return false;
         mdl.initanimparts();
         mdl.initskins();
-        defformatstring(animname, "media/model/%s/%s.md5anim", name, fname);
+        defformatstring(animname, "Game/Data/Meshes/%s/%s.md5anim", name, fname);
         ((md5meshgroup *)mdl.meshes)->loadanim(path(animname));
         return true;
     }
 
     bool load()
     {
-        formatstring(dir, "media/model/%s", name);
-        defformatstring(cfgname, "media/model/%s/md5.cfg", name);
+        formatstring(dir, "Game/Data/Meshes/%s", name);
+        defformatstring(cfgname, "Game/Data/Meshes/%s/DefMD5.hed", name);
 
         loading = this;
         identflags &= ~IDF_PERSIST;

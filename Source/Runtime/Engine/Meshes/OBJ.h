@@ -200,11 +200,11 @@ struct obj : vertmodel, vertloader<obj>
     {
         part &mdl = addpart();
         const char *pname = parentdir(name);
-        defformatstring(name1, "media/model/%s/tris.obj", name);
+        defformatstring(name1, "Game/Data/Meshes/%s/tris.obj", name);
         mdl.meshes = sharemeshes(path(name1));
         if(!mdl.meshes)
         {
-            defformatstring(name2, "media/model/%s/tris.obj", pname);    // try obj in parent folder (vert sharing)
+            defformatstring(name2, "Game/Data/Meshes/%s/tris.obj", pname);    // try obj in parent folder (vert sharing)
             mdl.meshes = sharemeshes(path(name2));
             if(!mdl.meshes) return false;
         }
@@ -217,8 +217,8 @@ struct obj : vertmodel, vertloader<obj>
 
     bool load()
     {
-        formatstring(dir, "media/model/%s", name);
-        defformatstring(cfgname, "media/model/%s/obj.cfg", name);
+        formatstring(dir, "Game/Data/Meshes/%s", name);
+        defformatstring(cfgname, "Game/Data/Meshes/%s/DefOBJ.hed", name);
 
         loading = this;
         identflags &= ~IDF_PERSIST;

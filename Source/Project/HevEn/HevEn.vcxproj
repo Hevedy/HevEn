@@ -68,7 +68,7 @@
     <ClInclude Include="..\..\Runtime\Engine\Octrees\Octa.h" />
     <ClInclude Include="..\..\Runtime\Engine\Physics\Ragdoll.h" />
     <ClInclude Include="..\..\Runtime\Engine\Scale.h" />
-    <ClInclude Include="..\..\Runtime\Engine\SMD.h" />
+    <ClInclude Include="..\..\Runtime\Engine\Meshes\SMD.h" />
     <ClInclude Include="..\..\Runtime\Engine\UI\TextEdit.h" />
     <ClInclude Include="..\..\Runtime\Engine\World.h" />
     <ClInclude Include="..\..\Runtime\Game\AI\AI.h" />

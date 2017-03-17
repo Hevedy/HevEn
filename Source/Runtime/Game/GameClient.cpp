@@ -272,7 +272,7 @@ namespace game
 
     void saveauthkeys()
     {
-        string fname = "config/auth.cfg";
+        string fname = "Config/Auth.cfg";
         stream *f = openfile(path(fname), "w");
         if(!f) { conoutf(CON_ERROR, "failed to open %s for writing", fname); return; }
         loopv(authkeys)

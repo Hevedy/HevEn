@@ -174,9 +174,6 @@
     <ClInclude Include="..\..\Runtime\Engine\Scale.h">
       <Filter>Header Files\Runtime\Engine</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Runtime\Engine\SMD.h">
-      <Filter>Header Files\Runtime\Engine</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\Runtime\Engine\World.h">
       <Filter>Header Files\Runtime\Engine</Filter>
     </ClInclude>
@@ -227,6 +224,9 @@
     </ClInclude>
     <ClInclude Include="..\..\Runtime\Core\IMGUI\imgui_impl_sdl_gl3.h">
       <Filter>Header Files\Runtime\Core\IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Runtime\Engine\Meshes\SMD.h">
+      <Filter>Header Files\Runtime\Engine\Meshes</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

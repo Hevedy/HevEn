@@ -888,16 +888,16 @@ namespace game
     void writegamedata(vector<char> &extras) {}
     void readgamedata(vector<char> &extras) {}
 
-    const char *gameconfig() { return "config/game.cfg"; }
-    const char *savedconfig() { return "config/saved.cfg"; }
-    const char *restoreconfig() { return "config/restore.cfg"; }
-    const char *defaultconfig() { return "config/default.cfg"; }
-    const char *autoexec() { return "config/autoexec.cfg"; }
-    const char *savedservers() { return "config/servers.cfg"; }
+    const char *gameconfig() { return "Game/Scripts/Game.hec"; }
+    const char *savedconfig() { return "Config/Saved.cfg"; }
+    const char *restoreconfig() { return "Config/Restore.cfg"; }
+    const char *defaultconfig() { return "Config/Default.cfg"; }
+    const char *autoexec() { return "Config/Autoexec.cfg"; }
+    const char *savedservers() { return "Config/Servers.cfg"; }
 
     void loadconfigs()
     {
-        execfile("config/auth.cfg", false);
+        execfile("Config/Auth.cfg", false);
     }
 
     bool clientoption(const char *arg) { return false; }
