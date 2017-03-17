@@ -1,3 +1,13 @@
+// ===========================================================================
+// 
+// HevEn (C) 2017 by Hevedy <https://github.com/Hevedy>
+// 
+// This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0.
+// If a copy of the MPL was not distributed with this file, 
+// You can obtain one at https://mozilla.org/MPL/2.0/.
+// 
+// ---------------------------------------------------------------------------
+// 
 // ImGui SDL2 binding with OpenGL3
 // In this binding, ImTextureID is used to store an OpenGL 'GLuint' texture identifier. Read the FAQ about ImTextureID in imgui.cpp.
 
