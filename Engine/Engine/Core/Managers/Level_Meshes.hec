@@ -1,0 +1,13 @@
+
+mapmodelreset
+	mapmodel "Primitives/Capsule"
+	mapmodel "Primitives/Cone"
+	mapmodel "Primitives/Cube"
+	mapmodel "Primitives/CubeRounded"
+	mapmodel "Primitives/Cylinder"
+	mapmodel "Primitives/Dome"
+	mapmodel "Primitives/Hexagon"
+	mapmodel "Primitives/Plane"
+	mapmodel "Primitives/Pyramid"
+	mapmodel "Primitives/Sphere"
+   

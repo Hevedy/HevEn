@@ -13,16 +13,16 @@ editbindmod = [editbind $arg1 [@arg2 1; onrelease [@@arg2 0]]]
 quine = [echo (format "quine = [%1]" $quine)]
 
 issomeoneelsemaster = [
-   >= (listfind cn $listclients [ismaster $cn]) 0
+	>= (listfind cn $listclients [ismaster $cn]) 0
 ]
 
 numbots = [
-   listcount cn $listclients [isai $cn]
+	listcount cn $listclients [isai $cn]
 ]
 clearbots = [
-   looplist cn $listclients [
-      if (isai $cn) [delbot]
-   ]
+	looplist cn $listclients [
+		if (isai $cn) [delbot]
+	]
 ]
 
 // Returns given RGB color as an INT color
@@ -36,9 +36,9 @@ rgbtohex = [tohex (rgbtoint $arg1 $arg2 $arg3) 6]
 // Returns given INT color as an RGB color
 // usage: (inttorgb <value> R-var G-var B-var)
 inttorgb = [
-   $arg2 = (& (>> $arg1 16) 0xFF)
-   $arg3 = (& (>> $arg1 8) 0xFF)
-   $arg4 = (& $arg1 0xFF)
+	$arg2 = (& (>> $arg1 16) 0xFF)
+	$arg3 = (& (>> $arg1 8) 0xFF)
+	$arg4 = (& $arg1 0xFF)
 ]
 
 // *.tex file handling
@@ -46,15 +46,15 @@ texsky      = [setshader "stdworld"; texture 0 "DefaultVolume.png"]
 texerror    = [setshader "stdworld"; texture 0 "Default.png"]
 texnorender = [setshader "stdworld"; texture 0 "DefaultError.png"]
 texload     = [
-   if (! (exec [Engine/Data/Textures/Core/@arg1.tex] 0)) [
-      error [texload error: @arg1.tex not found]
-      texerror
-   ]
+	if (! (exec [Engine/Data/Textures/Core/@arg1.hed] 0)) [
+		error [texload error: @arg1.hed not found]
+		texerror
+	]
 ]
 
 decalload = [
-   if (! (exec [Game/Data/Textures/Decals/@arg1.hec] 0)) [
-      error [decalload error: @arg1.hec not found]
-   ]
+	if (! (exec [Game/Data/Textures/Decals/@arg1.hec] 0)) [
+		error [decalload error: @arg1.hec not found]
+	]
 ]
 

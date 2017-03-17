@@ -1,0 +1,58 @@
+// Notice: This list is dynamic and will change with every release.
+//         Please use a dedicated map.cfg.
+
+exec "Engine/Core/Managers/Level_Meshes.hec"  // Default Mapmodel List
+
+// Default Sky/Light Settings
+setdefaultenv = [
+	skybox ""
+	atmo 1
+	sunlightpitch 50
+	sunlightyaw 30
+	sunlight 0xFFF8E0
+	skylight 0x7495B8
+]
+
+if $emptymap [setdefaultenv]
+
+materialreset
+loop+ i 1 4 [
+	texture [glass@i] "mat_glass/nieb/scratch2.png"          // Glass Normals
+	texture [water@i] "mat_water/nieb/water.png"             // Water (Unused)
+	texture 1         "mat_water/appleflap/water_normal.png" // Water Normals
+	texture 1         "mat_water/nieb/waterfall.png"         // Waterfall Diffuse
+	texture 1         "mat_water/nieb/waterfall_normal.png"  // Waterfall Normals
+	texture [lava@i]  "mat_lava/nieb/lava.png"               // Lava Diffuse
+	texture 1         "mat_lava/nieb/lava_normal.png"        // Lava Normals
+	texture 1         "mat_lava/nieb/lava.png"               // Lavafall Diffuse
+	texture 1         "mat_lava/nieb/lava_normal.png"        // Lavafall Normals
+]
+
+decalreset
+	//decalload "nieb/complex/loadingbay"
+
+texturereset            // Start world texture list
+	texsky               // Dummy "sky" texture
+	texload "Grids/GridBlue" // Default geometry texture
+	texload "Grids/GridDark"
+	texload "Grids/GridLight"
+	texload "Grids/GridOrange"
+	texload "Grids/GridWhite"
+
+	texload "Colors/Aqua"
+	texload "Colors/Black"
+	texload "Colors/Blue"
+	texload "Colors/Brown"
+	texload "Colors/Gray"
+	texload "Colors/Green"
+	texload "Colors/Magenta"
+	texload "Colors/Orange"
+	texload "Colors/Pink"
+	texload "Colors/Purple"
+	texload "Colors/Red"
+	texload "Colors/Silver"
+	texload "Colors/White"
+	texload "Colors/Yellow"
+
+
+	setshader "stdworld"

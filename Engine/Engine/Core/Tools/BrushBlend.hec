@@ -1,0 +1,30 @@
+///////////////////////////////////////////////////////////////////////////////
+//  Texture-Blending Brush List                                              //
+///////////////////////////////////////////////////////////////////////////////
+
+looplist2 n p [
+	"Circle"       BrushShapeCircle
+	"Decagon"       BrushShapeDecagon
+	"Ellipse"      BrushShapeEllipse
+	"Glow Big"    BrushShapeGlowBig
+	"Glow BigIntense"    BrushShapeGlowBigIntense
+	"Glow Circle"   BrushShapeGlowCircle
+	"Glow Decagon"   BrushShapeGlowDecagon
+	"Glow Ellipse"   BrushShapeGlowEllipse
+	"Glow Hexagon"  BrushShapeGlowHexagon
+	"Glow Octagon"   BrushShapeGlowOctagon
+	"Glow Pentagon"   BrushShapeGlowPentagon
+	"Glow Rectangle"  BrushShapeGlowRectangle
+	"Glow Rhombus"   BrushShapeGlowRhombus
+	"Glow Small"   BrushShapeGlowSmall
+	"Glow SmallIntense"  BrushShapeGlowSmallIntense
+	"Glow Square"  BrushShapeGlowSquare
+	"Glow Triangle"  BrushShapeGlowTriangle
+	"Hexagon" BrushShapeHexagon
+	"Octagon"  BrushShapeOctagon
+	"Pentagon"  BrushShapePentagon
+	"Rectangle" BrushShapeRectangle
+	"Rhombus"    BrushShapeRhombus
+	"Square"    BrushShapeSquare
+	"Triangle"   BrushShapeTriangle
+] [addblendbrush $n (concatword "Engine/Tools/Data/Brushes/" $p ".png")]

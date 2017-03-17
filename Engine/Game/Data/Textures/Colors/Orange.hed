@@ -1,0 +1,2 @@
+setshader "stdworld"
+	texture 0 "Colors/Orange.png"
