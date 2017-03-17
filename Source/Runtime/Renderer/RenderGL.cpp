@@ -2627,7 +2627,7 @@ void loadcrosshair(const char *name, int i)
     if(crosshairs[i] == notexture)
     {
         name = game::defaultcrosshair(i);
-        if(!name) name = "media/interface/crosshair/default.png";
+        if(!name) name = "Engine/Data/UI/Crosshairs/Crosshair01_32.png";
         crosshairs[i] = textureload(name, 3, true);
     }
 }
@@ -2645,7 +2645,7 @@ ICOMMAND(getcrosshair, "i", (int *i),
     if(*i >= 0 && *i < MAXCROSSHAIRS)
     {
         name = crosshairs[*i] ? crosshairs[*i]->name : game::defaultcrosshair(*i);
-        if(!name) name = "media/interface/crosshair/default.png";
+        if(!name) name = "Engine/Data/UI/Crosshairs/Crosshair01_32.png";
     }
     result(name);
 });
@@ -2668,7 +2668,7 @@ void drawcrosshair(int w, int h)
     if(windowhit)
     {
         static Texture *cursor = NULL;
-        if(!cursor) cursor = textureload("media/interface/cursor.png", 3, true);
+        if(!cursor) cursor = textureload("Engine/Data/UI/Menus/Cursor.png", 3, true);
         crosshair = cursor;
         chsize = cursorsize*w/900.0f;
         UI::getcursorpos(cx, cy);

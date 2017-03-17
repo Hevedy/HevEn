@@ -804,9 +804,9 @@ namespace game
     {
         switch(index)
         {
-            case 2: return "media/interface/crosshair/default_hit.png";
-            case 1: return "media/interface/crosshair/teammate.png";
-            default: return "media/interface/crosshair/default.png";
+            case 2: return "Engine/Data/UI/Crosshairs/Crosshair01_Hit_32.png";
+            case 1: return "Engine/Data/UI/Crosshairs/Crosshair01_No_32.png";
+            default: return "Engine/Data/UI/Crosshairs/Crosshair01_32.png";
         }
     }
 

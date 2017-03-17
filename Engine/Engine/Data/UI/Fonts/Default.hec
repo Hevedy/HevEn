@@ -1,5 +1,5 @@
-// ../Engine/Data/Fonts/Default.ttf Default 8 0.15:0.35:0.35:0.55 5 5 0.75:2.5 1.25 30 30 512 512 20 40 64 Engine/Data/Fonts/
-font "Default" "<grey>Engine/Data/Fonts/Default0.png" 20 40
+// ../Engine/Data/UI/Fonts/Default.ttf Default 8 0.15:0.35:0.35:0.55 5 5 0.75:2.5 1.25 30 30 512 512 20 40 64 Engine/Data/Fonts/
+font "Default" "<grey>Engine/Data/UI/Fonts/Default0.png" 20 40
 fontscale 64
 fontborder 0.35 0.55
 fontoffset "À"

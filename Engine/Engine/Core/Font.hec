@@ -1,3 +1,0 @@
-loopfiles f "Engine/Data/Fonts" hec [
-   exec (concatword "Engine/Data/Fonts/" $f ".hec")
-]

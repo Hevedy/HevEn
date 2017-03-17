@@ -47,6 +47,7 @@ void cleanup()
     if(screen) SDL_SetWindowGrab(screen, SDL_FALSE);
     cleargamma();
     freeocta(worldroot);
+	ImGui_ImplSdlGL3_Shutdown();
     UI::cleanup();
     extern void clear_command(); clear_command();
     extern void clear_console(); clear_console();
@@ -95,6 +96,7 @@ void fatal(const char *s, ...)    // failure exit
                     if(screen) SDL_SetWindowFullscreen(screen, 0);
                 #endif
             }
+			ImGui_ImplSdlGL3_Shutdown();
             SDL_Quit();
             SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_ERROR, "HevEn fatal error", msg, NULL);
         }
@@ -200,21 +202,21 @@ void renderbackgroundview(int w, int h, const char *caption, Texture *mapshot, c
     gle::defvertex(2);
     gle::deftexcoord0();
 
-    settexture("media/interface/background.png", 0);
+    settexture("Game/Data/UI/Menus/Background.png", 0);
     float bu = w*0.67f/256.0f, bv = h*0.67f/256.0f;
     bgquad(0, 0, w, h, backgroundu, backgroundv, bu, bv);
 
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
-    settexture("media/interface/shadow.png", 3);
+    settexture("Game/Data/UI/Menus/Shadow.png", 3);
     bgquad(0, 0, w, h);
 
     glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
 
     float lh = 0.5f*min(w, h), lw = lh*2,
           lx = 0.5f*(w - lw), ly = 0.5f*(h*0.5f - lh);
-    settexture((maxtexsize ? min(maxtexsize, hwtexsize) : hwtexsize) >= 1024 && (hudw > 1280 || hudh > 800) ? "<premul>media/interface/logo_1024.png" : "<premul>media/interface/logo.png", 3);
+    settexture((maxtexsize ? min(maxtexsize, hwtexsize) : hwtexsize) >= 1024 && (hudw > 1280 || hudh > 800) ? "<premul>Game/Data/UI/Menus/GameLogo_Big.png" : "<premul>Game/Data/UI/Menus/GameLogo.png", 3);
     bgquad(lx, ly, lw, lh);
 
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
@@ -332,7 +334,7 @@ void renderprogressview(int w, int h, float bar, const char *text)   // also use
     float fh = 0.060f*min(w, h), fw = fh*15,
           fx = renderedframe ? w - fw - fh/4 : 0.5f*(w - fw),
           fy = renderedframe ? fh/4 : h - fh*1.5f;
-    settexture("media/interface/loading_frame.png", 3);
+    settexture("Engine/Data/UI/Menus/ProgressBar_Background.png", 3);
     bgquad(fx, fy, fw, fh);
 
     glEnable(GL_BLEND);
@@ -346,7 +348,7 @@ void renderprogressview(int w, int h, float bar, const char *text)   // also use
           ex = bx+sw + max(mw*bar, fw*8/512.0f);
     if(bar > 0)
     {
-        settexture("media/interface/loading_bar.png", 3);
+        settexture("Engine/Data/UI/Menus/ProgressBar.png", 3);
         bgquad(bx, by, sw, bh, su1, 0, su2-su1, 1);
         bgquad(bx+sw, by, ex-(bx+sw), bh, su2, 0, eu1-su2, 1);
         bgquad(ex, by, ew, bh, eu1, 0, eu2-eu1, 1);
@@ -630,13 +632,13 @@ void resetgl()
 
     inbetweenframes = false;
     if(!reloadtexture(*notexture) ||
-       !reloadtexture("<premul>Engine/Data/UI/logo.png") ||
-       !reloadtexture("<premul>Engine/Data/UI/logo_1024.png") ||
-       !reloadtexture("Engine/Data/UI/background.png") ||
-       !reloadtexture("Engine/Data/UI/shadow.png") ||
-       !reloadtexture("Engine/Data/UI/mapshot_frame.png") ||
-       !reloadtexture("Engine/Data/UI/loading_frame.png") ||
-       !reloadtexture("Engine/Data/UI/loading_bar.png"))
+       !reloadtexture("<premul>Game/Data/UI/Menus/GameLogo.png") ||
+       !reloadtexture("<premul>Game/Data/UI/Menus/GameLogo_Big.png") ||
+       !reloadtexture("Game/Data/UI/Menus/Background.png") ||
+       !reloadtexture("Game/Data/UI/Menus/Shadow.png") ||
+       !reloadtexture("Engine/Data/UI/Menus/LevelFrame.png") ||
+       !reloadtexture("Engine/Data/UI/Menus/ProgressBar_Background.png") ||
+       !reloadtexture("Engine/Data/UI/Menus/ProgressBar.png"))
         fatal("failed to reload core texture");
     reloadfonts();
     inbetweenframes = true;
@@ -1131,7 +1133,7 @@ int main(int argc, char **argv)
 
     logoutf("Init: Console");
     if(!execfile("Engine/Core/STDLib.hec", false)) fatal("cannot find data files (you are running from the wrong folder, try .bat file in the main folder)");   // this is the first file we load.
-    if(!execfile("Engine/Core/Font.hec", false)) fatal("cannot find font definitions");
+    if(!execfile("Engine/Core/Fonts.hec", false)) fatal("cannot find font definitions");
     if(!setfont("Default")) fatal("no default font specified");
 
 
