@@ -86,6 +86,7 @@
     <ClCompile Include="..\..\Runtime\Core\Geometry.cpp" />
     <ClCompile Include="..\..\Runtime\Core\GLEmu.cpp" />
     <ClCompile Include="..\..\Runtime\Core\IMGUI\imgui.cpp" />
+    <ClCompile Include="..\..\Runtime\Core\IMGUI\imgui_demo.cpp" />
     <ClCompile Include="..\..\Runtime\Core\IMGUI\imgui_draw.cpp" />
     <ClCompile Include="..\..\Runtime\Core\IMGUI\imgui_impl_sdl_gl3.cpp" />
     <ClCompile Include="..\..\Runtime\Core\PCH.cpp">
@@ -380,6 +381,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <IntDir>.\Debug\</IntDir>
+    <TargetName>$(ProjectName)_Debug</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugServer|Win32'">
     <LinkIncremental>true</LinkIncremental>
@@ -430,6 +432,9 @@
       <HeapReserveSize>0</HeapReserveSize>
       <HeapCommitSize>0</HeapCommitSize>
     </Link>
+    <PostBuildEvent>
+      <Command>copy "$(TargetPath)" ..\..\..\Engine\Binaries</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugServer|Win32'">
     <ClCompile>

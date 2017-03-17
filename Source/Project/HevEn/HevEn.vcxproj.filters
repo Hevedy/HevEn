@@ -401,5 +401,8 @@
     <ClCompile Include="..\..\Runtime\Core\IMGUI\imgui_impl_sdl_gl3.cpp">
       <Filter>Source Files\Runtime\Core\IMGUI</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Runtime\Core\IMGUI\imgui_demo.cpp">
+      <Filter>Source Files\Runtime\Core\IMGUI</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

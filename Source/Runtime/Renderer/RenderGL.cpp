@@ -485,6 +485,7 @@ void gl_checkextensions()
     glUseProgram_ =               (PFNGLUSEPROGRAMPROC)               getprocaddress("glUseProgram");
     glCreateShader_ =             (PFNGLCREATESHADERPROC)             getprocaddress("glCreateShader");
     glDeleteShader_ =             (PFNGLDELETESHADERPROC)             getprocaddress("glDeleteShader");
+	glDetachShader_ =			  (PFNGLDETACHSHADERPROC)			  getprocaddress("glDetachShader");
     glShaderSource_ =             (PFNGLSHADERSOURCEPROC)             getprocaddress("glShaderSource");
     glCompileShader_ =            (PFNGLCOMPILESHADERPROC)            getprocaddress("glCompileShader");
     glGetShaderiv_ =              (PFNGLGETSHADERIVPROC)              getprocaddress("glGetShaderiv");
@@ -494,6 +495,7 @@ void gl_checkextensions()
     glGetShaderInfoLog_ =         (PFNGLGETSHADERINFOLOGPROC)         getprocaddress("glGetShaderInfoLog");
     glLinkProgram_ =              (PFNGLLINKPROGRAMPROC)              getprocaddress("glLinkProgram");
     glGetUniformLocation_ =       (PFNGLGETUNIFORMLOCATIONPROC)       getprocaddress("glGetUniformLocation");
+	glGetAttribLocation_ =		  (PFNGLGETATTRIBLOCATIONPROC)		  getprocaddress("glGetAttribLocation");
     glUniform1f_ =                (PFNGLUNIFORM1FPROC)                getprocaddress("glUniform1f");
     glUniform2f_ =                (PFNGLUNIFORM2FPROC)                getprocaddress("glUniform2f");
     glUniform3f_ =                (PFNGLUNIFORM3FPROC)                getprocaddress("glUniform3f");

@@ -32,8 +32,9 @@
 // ===========================================================================
 
 
-#include <imgui.h>
 #include "Engine.h"
+#include "imgui.h"
+#include "imgui_impl_sdl_gl3.h"
 
 extern void cleargamma();
 
@@ -1128,15 +1129,19 @@ int main(int argc, char **argv)
     notexture = textureload("Engine/Data/Textures/Core/Default.png");
     if(!notexture) fatal("could not find core textures");
 
-	//TODO IMGUI
-
-
     logoutf("Init: Console");
     if(!execfile("Engine/Core/STDLib.hec", false)) fatal("cannot find data files (you are running from the wrong folder, try .bat file in the main folder)");   // this is the first file we load.
     if(!execfile("Engine/Core/Font.hec", false)) fatal("cannot find font definitions");
     if(!setfont("Default")) fatal("no default font specified");
 
-    UI::setup();
+
+	//TODO IMGUI
+	//ImGui::NewFrame();
+	bool show_test_window = true;
+	bool show_another_window = false;
+	ImVec4 clear_color = ImColor( 114, 144, 154 );
+	ImGui_ImplSdlGL3_Init( screen );
+	UI::setup();
 
     inbetweenframes = true;
     renderbackground("Initializing...");
@@ -1204,6 +1209,26 @@ int main(int argc, char **argv)
     inputgrab(grabinput = true);
     ignoremousemotion();
 
+	//imGui = new imgui( context_ );
+	/*
+	ImGui_ImplSdlGL3_Init( screen );
+	ImGui_ImplSdlGL3_NewFrame( screen );
+	{
+		static float f = 0.0f;
+		ImGui::Text( "Hello, world!" );
+		ImGui::SliderFloat( "float", &f, 0.0f, 1.0f );
+		ImGui::Text( "Application average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate );
+	}
+
+	// imgui's Test window
+	ImGui::ShowTestWindow();
+
+	// Using Urho3D texture with the integration's renderer
+
+	ImGui::Image( notexture, ImVec2( (float)notexture->w, (float)notexture->h ), ImVec2( 0, 0 ), ImVec2( 1, 1 ), ImColor( 255, 255, 255, 255 ), ImColor( 255, 255, 255, 128 ) );
+
+	*/
+
     for(;;)
     {
         static int frames = 0;
@@ -1221,6 +1246,34 @@ int main(int argc, char **argv)
         updatetime();
 
         checkinput();
+		ImGui_ImplSdlGL3_NewFrame( screen );
+		// 1. Show a simple window
+		// Tip: if we don't call ImGui::Begin()/ImGui::End() the widgets appears in a window automatically called "Debug"
+		{
+			static float f = 0.0f;
+			ImGui::Text( "Hello, world!" );
+			ImGui::SliderFloat( "float", &f, 0.0f, 1.0f );
+			ImGui::ColorEdit3( "clear color", (float*)&clear_color );
+			if ( ImGui::Button( "Test Window" ) ) show_test_window ^= 1;
+			if ( ImGui::Button( "Another Window" ) ) show_another_window ^= 1;
+			ImGui::Text( "Application average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate );
+		}
+
+		// 2. Show another simple window, this time using an explicit Begin/End pair
+		if ( show_another_window ) {
+			ImGui::SetNextWindowSize( ImVec2( 200, 100 ), ImGuiSetCond_FirstUseEver );
+			ImGui::Begin( "Another Window", &show_another_window );
+			ImGui::Text( "Hello" );
+			ImGui::End();
+		}
+
+		// 3. Show the ImGui test window. Most of the sample code is in ImGui::ShowTestWindow()
+		if ( show_test_window ) {
+			ImGui::SetNextWindowPos( ImVec2( 650, 20 ), ImGuiSetCond_FirstUseEver );
+			ImGui::ShowTestWindow( &show_test_window );
+		}
+
+		ImGui::Render();
         UI::update();
         menuprocess();
         tryedit();
