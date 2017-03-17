@@ -1275,7 +1275,6 @@ int main(int argc, char **argv)
 			ImGui::ShowTestWindow( &show_test_window );
 		}
 
-		ImGui::Render();
         UI::update();
         menuprocess();
         tryedit();
@@ -1300,6 +1299,7 @@ int main(int argc, char **argv)
 
         inbetweenframes = false;
         gl_drawframe();
+		ImGui::Render();
         swapbuffers();
         renderedframe = inbetweenframes = true;
     }
