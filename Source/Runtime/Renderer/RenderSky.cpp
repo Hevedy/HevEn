@@ -43,7 +43,7 @@ void loadsky(const char *basename, Texture *texs[6])
     {
         const char *side = cubemapsides[i].name;
         string name;
-        copystring(name, makerelpath("media/sky", basename));
+        copystring(name, makerelpath("Game/Data/Textures/Skybox", basename));
         if(wildcard)
         {
             char *chop = strchr(name, '*');
@@ -70,7 +70,7 @@ Texture *loadskyoverlay(const char *basename)
 {
     const char *ext = strrchr(basename, '.');
     string name;
-    copystring(name, makerelpath("media/sky", basename));
+    copystring(name, makerelpath("Game/Data/Textures/Skybox", basename));
     Texture *t = notexture;
     if(ext) t = textureload(name, 0, true, false);
     else

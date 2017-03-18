@@ -736,7 +736,7 @@ struct Slot
 
     virtual int type() const { return OCTA; }
     virtual const char *name() const;
-    virtual const char *texturedir() const { return "media/texture"; }
+    virtual const char *texturedir() const { return "Game/Data/Textures"; }
 
     virtual VSlot &emptyvslot();
 
@@ -824,7 +824,7 @@ struct DecalSlot : Slot, VSlot
 
     int type() const { return DECAL; }
     const char *name() const;
-    const char *texturedir() const { return "media/decal"; }
+    const char *texturedir() const { return "Game/Data/Textures/Decals"; }
 
     VSlot &emptyvslot() { return *this; }
 

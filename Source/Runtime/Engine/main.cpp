@@ -1169,9 +1169,9 @@ int main(int argc, char **argv)
     execfile("Engine/Core/STDEdit.hec");
     execfile(game::gameconfig());
     //execfile("config/sound.cfg"); TODO Add audio
-    execfile("config/ui.cfg"); // TODO Add UI
-    execfile("Engine/Core/Tools/BrushHeightMap.hec");
-    execfile("Engine/Core/Tools/BrushBlend.hec");
+    execfile("Engine/Core/UI/UI.hec"); // TODO Add UI
+    execfile("Engine/Tools/Scripts/BrushHeightMap.hec");
+    execfile("Engine/Tools/Scripts/BrushBlend.hec");
     if(game::savedservers()) execfile(game::savedservers(), false);
 
     identflags |= IDF_PERSIST;
@@ -1239,6 +1239,7 @@ int main(int argc, char **argv)
 		ImGui_ImplSdlGL3_NewFrame( screen );
 		// 1. Show a simple window
 		// Tip: if we don't call ImGui::Begin()/ImGui::End() the widgets appears in a window automatically called "Debug"
+		/*
 		{
 			static float f = 0.0f;
 			ImGui::Text( "Hello, world!" );
@@ -1262,6 +1263,7 @@ int main(int argc, char **argv)
 			ImGui::SetNextWindowPos( ImVec2( 650, 20 ), ImGuiSetCond_FirstUseEver );
 			ImGui::ShowTestWindow( &show_test_window );
 		}
+		*/
 
         UI::update();
         menuprocess();

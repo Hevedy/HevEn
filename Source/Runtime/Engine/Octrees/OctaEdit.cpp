@@ -1241,7 +1241,7 @@ void saveprefab(char *name)
     if(b->copy) freeblock(b->copy);
     protectsel(b->copy = blockcopy(block3(sel), sel.grid));
     changed(sel);
-    defformatstring(filename, "media/prefab/%s.obr", name);
+    defformatstring(filename, "Game/Data/Prefabs/%s.obr", name);
     path(filename);
     stream *f = opengzfile(filename, "wb");
     if(!f) { conoutf(CON_ERROR, "could not write prefab to %s", filename); return; }
@@ -1272,7 +1272,7 @@ prefab *loadprefab(const char *name, bool msg = true)
    prefab *b = prefabs.access(name);
    if(b) return b;
 
-   defformatstring(filename, "media/prefab/%s.obr", name);
+   defformatstring(filename, "Game/Data/Prefabs/%s.obr", name);
    path(filename);
    stream *f = opengzfile(filename, "rb");
    if(!f) { if(msg) conoutf(CON_ERROR, "could not read prefab %s", filename); return NULL; }

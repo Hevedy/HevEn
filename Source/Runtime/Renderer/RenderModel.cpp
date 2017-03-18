@@ -340,7 +340,7 @@ COMMAND(rdanimjoints, "i");
 // mapmodels
 
 vector<mapmodelinfo> mapmodels;
-static const char * const mmprefix = "mapmodel/";
+static const char * const mmprefix = "Level/";
 static const int mmprefixlen = strlen(mmprefix);
 
 void mapmodel(char *name)
@@ -452,7 +452,7 @@ model *loadmodel(const char *name, int i, bool msg)
         if(!name[0] || loadingmodel || failedmodels.find(name, NULL)) return NULL;
         if(msg)
         {
-            defformatstring(filename, "media/model/%s", name);
+            defformatstring(filename, "Game/Data/Meshes/%s", name);
             renderprogress(loadprogress, filename);
         }
         loopi(NUMMODELTYPES)
@@ -1136,8 +1136,8 @@ void loadskin(const char *dir, const char *altdir, Texture *&skin, Texture *&mas
         } \
     }
 
-    defformatstring(mdir, "media/model/%s", dir);
-    defformatstring(maltdir, "media/model/%s", altdir);
+    defformatstring(mdir, "Game/Data/Meshes/%s", dir);
+    defformatstring(maltdir, "Game/Data/Meshes/%s", altdir);
     masks = notexture;
     tryload(skin, NULL, NULL, "skin");
     tryload(masks, NULL, NULL, "masks");

@@ -2287,7 +2287,7 @@ void texgrass(char *name)
     if(!defslot) return;
     Slot &s = *defslot;
     DELETEA(s.grass);
-    s.grass = name[0] ? newstring(makerelpath("media/texture", name)) : NULL;
+    s.grass = name[0] ? newstring(makerelpath("Game/Data/Textures", name)) : NULL;
 }
 COMMAND(texgrass, "s");
 
@@ -2838,7 +2838,7 @@ Texture *cubemaploadwildcard(Texture *t, const char *name, bool mipit, bool msg,
 Texture *cubemapload(const char *name, bool mipit, bool msg, bool transient)
 {
     string pname;
-    copystring(pname, makerelpath("media/sky", name));
+    copystring(pname, makerelpath("Game/Data/Textures/Skybox", name));
     path(pname);
     Texture *t = NULL;
     if(!strchr(pname, '*'))

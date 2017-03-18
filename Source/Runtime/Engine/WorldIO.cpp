@@ -160,18 +160,18 @@ VARP(savebak, 0, 2, 2);
 
 void setmapfilenames(const char *fname, const char *cname = NULL)
 {
-    formatstring(ogzname, "Game/Levels/%s/%s.hel", fname);
-    if(savebak==1) formatstring(bakname, "Game/Levels/%s/%s.BAK", fname);
+    formatstring(ogzname, "Game/Levels/%s/%s.hel", fname, fname);
+    if(savebak==1) formatstring(bakname, "Game/Levels/%s/%s.BAK", fname, fname);
     else
     {
         string baktime;
         time_t t = time(NULL);
         size_t len = strftime(baktime, sizeof(baktime), "%Y-%m-%d_%H.%M.%S", localtime(&t));
         baktime[min(len, sizeof(baktime)-1)] = '\0';
-        formatstring(bakname, "Game/Levels/%s/%s_%s.BAK", fname, baktime);
+        formatstring(bakname, "Game/Levels/%s/%s_%s.BAK", fname, fname, baktime);
     }
-    formatstring(cfgname, "Game/Levels/%s/%s.helc", cname ? cname : fname); // HevEn Level Code
-    formatstring(picname, "Game/Levels/%s/%s.png", fname);
+    formatstring(cfgname, "Game/Levels/%s/%s.helc", cname ? cname, cname : fname, fname ); // HevEn Level Code
+    formatstring(picname, "Game/Levels/%s/%s.png", fname, fname );
 
     path(ogzname);
     path(bakname);
@@ -182,9 +182,9 @@ void setmapfilenames(const char *fname, const char *cname = NULL)
 void mapcfgname()
 {
     const char *mname = game::getclientmap();
-    if(!*mname) mname = "untitled";
+    if(!*mname) mname = "Untitled";
 
-    defformatstring(cfgname, "Game/Levels/%s/%s.helc", mname);
+    defformatstring(cfgname, "Game/Levels/%s/%s.helc", mname, mname );
     path(cfgname);
     result(cfgname);
 }
@@ -1013,7 +1013,7 @@ void writeobj(char *name)
     {
         VSlot &vslot = lookupvslot(usedmtl[i], false);
         f->printf("newmtl slot%d\n", usedmtl[i]);
-        f->printf("map_Kd %s\n", vslot.slot->sts.empty() ? notexture->name : path(makerelpath("media", vslot.slot->sts[0].name)));
+        f->printf("map_Kd %s\n", vslot.slot->sts.empty() ? notexture->name : path(makerelpath("Game", vslot.slot->sts[0].name)));
         f->printf("\n");
     }
     delete f;
