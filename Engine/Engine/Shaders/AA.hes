@@ -76,13 +76,13 @@ smaaopt = [ >= (strstr $smaaopts $arg1) 0 ]
 smaashaders = [
     smaapreset = $arg1   
     smaaopts = $arg2
-    exec "config/glsl/smaa.cfg"
+    exec "Engine/Shaders/SMAA.hes"
 ]
 
 fxaaopt = [ >= (strstr $fxaaopts $arg1) 0 ]
 fxaashaders = [
     fxaapreset = $arg1
     fxaaopts = $arg2
-    exec "config/glsl/fxaa.cfg"
+    exec "Engine/Shaders/FXAA.hes"
 ]
 
