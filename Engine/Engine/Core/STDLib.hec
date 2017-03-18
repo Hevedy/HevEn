@@ -46,7 +46,7 @@ texsky      = [setshader "stdworld"; texture 0 "DefaultVolume.png"]
 texerror    = [setshader "stdworld"; texture 0 "Default.png"]
 texnorender = [setshader "stdworld"; texture 0 "DefaultError.png"]
 texload     = [
-	if (! (exec [Engine/Data/Textures/Core/@arg1.hed] 0)) [
+	if (! (exec [Game/Data/Textures/@arg1.hed] 0)) [
 		error [texload error: @arg1.hed not found]
 		texerror
 	]

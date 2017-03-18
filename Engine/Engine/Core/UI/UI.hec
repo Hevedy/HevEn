@@ -1,0 +1,14 @@
+
+exec "Engine/Core/UI/UICore.hec"           // UI library
+exec "Engine/Core/UI/UIStyle.hec"         // Styles
+
+exec "Game/Scripts/UI/UIMainMenu.hec
+exec "Game/Scripts/UI/UIScoreboard.hec"    // Scoreboard
+exec "Engine/Tools/Scripts/UI/UIEditHUD.hec"       // Editor HUD
+exec "Engine/Tools/Scripts/UI/UIEditor.hec"          // Editor Menus
+exec "Game/Scripts/UI/UIStats.hec"         // Player Stats
+exec "Game/Scripts/UI/UIOptions.hec"       // Options Menu
+
+reui = [
+   exec "Engine/Core/UI/UI.hec"
+]

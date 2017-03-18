@@ -54,5 +54,4 @@ texturereset            // Start world texture list
 	texload "Colors/White"
 	texload "Colors/Yellow"
 
-
 	setshader "stdworld"
