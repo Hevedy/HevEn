@@ -1150,7 +1150,7 @@ int main(int argc, char **argv)
 	bool show_test_window = true;
 	bool show_another_window = false;
 	ImVec4 clear_color = ImColor( 114, 144, 154 );
-	ImGui_ImplSdlGL3_Init( screen );
+	///ImGui_ImplSdlGL3_Init( screen );
 	UI::setup();
 
     inbetweenframes = true;
@@ -1165,7 +1165,7 @@ int main(int argc, char **argv)
 
     logoutf("Init: Core Scripts");
     initing = INIT_LOAD;
-    execfile("Engine/Core/Keymap.hec");
+    execfile("Engine/Core/KeyMap.hec");
     execfile("Engine/Core/STDEdit.hec");
     execfile(game::gameconfig());
     //execfile("config/sound.cfg"); TODO Add audio
@@ -1236,7 +1236,7 @@ int main(int argc, char **argv)
         updatetime();
 
         checkinput();
-		ImGui_ImplSdlGL3_NewFrame( screen );
+		///ImGui_ImplSdlGL3_NewFrame( screen );
 		// 1. Show a simple window
 		// Tip: if we don't call ImGui::Begin()/ImGui::End() the widgets appears in a window automatically called "Debug"
 		/*
@@ -1289,7 +1289,7 @@ int main(int argc, char **argv)
 
         inbetweenframes = false;
         gl_drawframe();
-		ImGui::Render();
+		///ImGui::Render();
         swapbuffers();
         renderedframe = inbetweenframes = true;
     }

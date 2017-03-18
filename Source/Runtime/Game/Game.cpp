@@ -891,7 +891,7 @@ namespace game
     const char *gameconfig() { return "Game/Scripts/Game.hec"; }
     const char *savedconfig() { return "Config/Saved.cfg"; }
     const char *restoreconfig() { return "Config/Restore.cfg"; }
-    const char *defaultconfig() { return "Config/Default.cfg"; }
+    const char *defaultconfig() { return "Engine/Core/KeyBind.hec"; }
     const char *autoexec() { return "Config/Autoexec.cfg"; }
     const char *savedservers() { return "Config/Servers.cfg"; }
 

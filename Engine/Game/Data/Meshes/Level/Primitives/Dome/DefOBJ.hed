@@ -5,6 +5,6 @@ objload Dome.obj
 
 
 // Mesh settings:
-mdlscale 100         // Scale Level      	= 100%
+mdlscale 10         // Scale Level      	= 100%
 mdlspec 100          // Specularity Level 	= 100%
 mdlshadow 1          // Shadow Casting     	= True
