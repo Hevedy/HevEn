@@ -116,7 +116,8 @@ namespace game
 
     static const playermodelinfo playermodels[] =
     {
-        { { "player/bones", "player/bones", "player/bones" }, { "hudgun", "hudgun", "hudgun" }, { "player", "player_azul", "player_rojo" }, true }
+        { { "Characters/Player/Capsule", "Characters/Player/Capsule", "Characters/Player/Capsule" }, { "hudgun", "hudgun", "hudgun" }, { "player", "player_azul", "player_rojo" }, true }
+		//{ { "player/bones", "player/bones", "player/bones" },{ "hudgun", "hudgun", "hudgun" },{ "player", "player_azul", "player_rojo" }, true }
     };
 
     extern void changedplayermodel();
