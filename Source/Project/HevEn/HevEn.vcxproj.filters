@@ -228,6 +228,9 @@
     <ClInclude Include="..\..\Runtime\Engine\Meshes\SMD.h">
       <Filter>Header Files\Runtime\Engine\Meshes</Filter>
     </ClInclude>
+    <ClInclude Include="application.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Runtime\Renderer\PostProcess\AA.cpp">
@@ -404,5 +407,15 @@
     <ClCompile Include="..\..\Runtime\Core\IMGUI\imgui_demo.cpp">
       <Filter>Source Files\Runtime\Core\IMGUI</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="application.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="AppIcon.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>
