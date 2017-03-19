@@ -12,9 +12,10 @@ The media content by Hevedy <https://github.com/Hevedy> (Art, Textures, Models, 
 * Octree BSP Style Modeling Tool. 
 * Occlusion Culling. 
 * Physics (Limited Physics to Pawns). 
+* Ragdoll Physics. 
 * Audio (Stereo Positional System). 
 * Particles. 
-* Networking. 
+* Networking (Client-Server). 
 * Pointlights. 
 * Spotlights. 
 * Directional Light. 
@@ -29,6 +30,7 @@ The media content by Hevedy <https://github.com/Hevedy> (Art, Textures, Models, 
 * SMAA. 
 * TAA. 
 * FXAA. 
+* Packaged Textures RGB Support. 
 * UI/Menus Samples. 
 * Custom Shaders Language. 
 * Custom Scripting Language. 
