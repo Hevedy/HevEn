@@ -30,5 +30,92 @@ namespace HevEnEditor {
         public MainForm() {
             InitializeComponent();
         }
+
+        private void comboBoxMatType_SelectedIndexChanged( object sender, EventArgs e ) {
+
+        }
+
+        private void MainForm_Load( object sender, EventArgs e ) {
+            comboBoxMatType.SelectedIndex = 0;
+            comboBoxMatClass.SelectedIndex = 0;
+            textBoxMatName.Text = "Default";
+            checkBoxMatDiffuse.Checked = true;
+        }
+
+        private void buttonDiffuse_Click( object sender, EventArgs e ) {
+
+        }
+
+        private void pictureBoxMatDiffuse_DragDrop( object sender, DragEventArgs e ) {
+
+        }
+
+        private void pictureBoxMatNormalMap_DragDrop( object sender, DragEventArgs e ) {
+
+        }
+
+        private void buttonDiffuse_DragDrop( object sender, DragEventArgs e ) {
+
+        }
+
+        private void pictureBoxMatNormalMap_Click( object sender, EventArgs e ) {
+
+        }
+
+        private void buttonMatNormalMap_Click( object sender, EventArgs e ) {
+
+        }
+
+        private void buttonMatNormalMap_DragDrop( object sender, DragEventArgs e ) {
+
+        }
+
+        private void pictureBoxMatSpecMap_Click( object sender, EventArgs e ) {
+
+        }
+
+        private void pictureBoxMatSpecMap_DragDrop( object sender, DragEventArgs e ) {
+
+        }
+
+        private void buttonMatSpecMap_Click( object sender, EventArgs e ) {
+
+        }
+
+        private void buttonMatSpecMap_DragDrop( object sender, DragEventArgs e ) {
+
+        }
+
+        private void pictureBoxMatGlowMap_Click( object sender, EventArgs e ) {
+
+        }
+
+        private void pictureBoxMatGlowMap_DragDrop( object sender, DragEventArgs e ) {
+
+        }
+
+        private void buttonMatGlowMap_Click( object sender, EventArgs e ) {
+
+        }
+
+        private void buttonMatGlowMap_DragDrop( object sender, DragEventArgs e ) {
+
+        }
+
+        private void pictureBoxMatEnvMap_Click( object sender, EventArgs e ) {
+
+        }
+
+        private void pictureBoxMatEnvMap_DragDrop( object sender, DragEventArgs e ) {
+
+        }
+
+        private void buttonMatEnvMap_Click( object sender, EventArgs e ) {
+
+        }
+
+        private void buttonMatEnvMap_DragDrop( object sender, DragEventArgs e ) {
+
+        }
     }
 }
