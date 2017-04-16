@@ -311,7 +311,8 @@ static const struct attackinfo { int gun, action, anim, vwepanim, hudanim, sound
 static const struct guninfo { const char *name, *file, *vwep; int attacks[NUMACTS]; } guns[NUMGUNS] =
 {
     { "railgun", "railgun", "worldgun/railgun", { -1, ATK_RAIL_SHOOT, ATK_RAIL_MELEE }, },
-    { "pulse rifle", "pulserifle", "worldgun/pulserifle", { -1, ATK_PULSE_SHOOT, ATK_PULSE_MELEE } }
+    //{ "pulse rifle", "pulserifle", "worldgun/pulserifle", { -1, ATK_PULSE_SHOOT, ATK_PULSE_MELEE }, },
+	{ "shotgun", "shotgun", "Weapons/World/Shotgun",{ -1, ATK_PULSE_SHOOT, ATK_PULSE_MELEE } }
 };
 
 #include "AI.h"

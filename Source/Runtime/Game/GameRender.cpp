@@ -116,7 +116,7 @@ namespace game
 
     static const playermodelinfo playermodels[] =
     {
-        { { "Characters/Player/Capsule", "Characters/Player/Capsule", "Characters/Player/Capsule" }, { "hudgun", "hudgun", "hudgun" }, { "player", "player_azul", "player_rojo" }, true }
+        { { "Characters/Player/Capsule", "Characters/Player/Capsule", "Characters/Player/Capsule" }, { "Weapons/Camera", "Weapons/Camera", "Weapons/Camera" }, { "player", "player_azul", "player_rojo" }, true }
 		//{ { "player/bones", "player/bones", "player/bones" },{ "hudgun", "hudgun", "hudgun" },{ "player", "player_azul", "player_rojo" }, true }
     };
 
@@ -398,9 +398,9 @@ namespace game
     VARP(hudgun, 0, 1, 1);
     VARP(hudgunsway, 0, 1, 1);
 
-    FVAR(swaystep, 1, 35.0f, 100);
-    FVAR(swayside, 0, 0.10f, 1);
-    FVAR(swayup, -1, 0.15f, 1);
+    FVAR(swaystep, 1, 28.0f, 100); //35.0f
+    FVAR(swayside, 0, 0.40f, 1); //0.10f
+    FVAR(swayup, -1, 0.15f, 1); //0.15f
 
     float swayfade = 0, swayspeed = 0, swaydist = 0;
     vec swaydir(0, 0, 0);
@@ -548,7 +548,7 @@ namespace game
                 formatstring(fname, "%s/%s", mdl.hudguns[0], file);
                 preloadmodel(fname);
             }
-            formatstring(fname, "worldgun/%s", file);
+            formatstring(fname, "Weapons/World/%s", file);
             preloadmodel(fname);
         }
     }
