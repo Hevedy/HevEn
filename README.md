@@ -1,8 +1,8 @@
 # HevEn
 HevEn is a small game engine based on Tesseract Engine http://tesseract.gg/ total restructured.  
 
-The source code by Hevedy <https://github.com/Hevedy> is under the Mozilla Public License Version 2.0.  
-The media content by Hevedy <https://github.com/Hevedy> (Art, Textures, Models, Musics, Sounds... etc) under the Creative Commons Attribution 3.0 Unported License. (Excludes Fonts, license in their folders).
+The source code by Hevedy <https://github.com/Hevedy> is under the zlib license <https://github.com/Hevedy/HevEn/blob/master/LICENSE>.  
+The media content by Hevedy <https://github.com/Hevedy> (Art, Textures, Models, Musics, Sounds... etc) under the Creative Commons Attribution 3.0 Unported License <https://github.com/Hevedy/HevEn/blob/master/LICENSE_Media>. (Excludes Fonts, license in their folders).
 
 
 ## Features: 
